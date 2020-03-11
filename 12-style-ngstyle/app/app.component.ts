@@ -12,6 +12,9 @@ interface Passenger {
   template: `
     <div class="app">
       <h3>Airline Passengers</h3>
+//-------------------------------------------------------------------------------------
+//                    check whether checked in or not
+//-------------------------------------------------------------------------------------
       <h3>Airline Passengers</h3>
       <ul>
         <li *ngFor="let passenger of passengers; let i = index;">
@@ -21,6 +24,7 @@ interface Passenger {
           {{ i }}: {{ passenger.fullname }}
         </li>
       </ul>
+//-------------------------------------------------------------------------------------
       <h3>Airline Passengers</h3>
       <ul>
         <li *ngFor="let passenger of passengers; let i = index;">
