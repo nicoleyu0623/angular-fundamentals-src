@@ -8,6 +8,7 @@ import { Passenger } from '../../models/passenger.interface';
   template: `
     <div>
       <span class="status" [class.checked-in]="detail.checkedIn"></span>
+//----------------------------------------------------------
       <div *ngIf="editing">
         <input 
           type="text" 
@@ -15,6 +16,7 @@ import { Passenger } from '../../models/passenger.interface';
           (input)="onNameChange(name.value)"
           #name>
       </div>
+//----------------------------------------------------------
       <div *ngIf="!editing">
         {{ detail.fullname }}
       </div>
@@ -22,9 +24,11 @@ import { Passenger } from '../../models/passenger.interface';
         Check in date: 
         {{ detail.checkInDate ? (detail.checkInDate | date: 'yMMMMd' | uppercase) : 'Not checked in' }}
       </div>
+//----------------------------------------------------------
       <div class="children">
         Children: {{ detail.children?.length || 0 }}
       </div>
+//-------------------toggle edit---------------------------------------
       <button (click)="toggleEdit()">
         {{ editing ? 'Done' : 'Edit' }}
       </button>
@@ -32,6 +36,7 @@ import { Passenger } from '../../models/passenger.interface';
         Remove
       </button>
     </div>
+//----------------------------------------------------------
   `
 })
 export class PassengerDetailComponent {
