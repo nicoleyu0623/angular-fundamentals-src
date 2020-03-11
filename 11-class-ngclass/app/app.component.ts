@@ -11,7 +11,8 @@ interface Passenger {
   styleUrls: ['app.component.scss'],
   template: `
     <div class="app">
-      <h3>Airline Passengers</h3>
+//--------------------------------------------------------------------
+  <h3>Airline Passengers</h3>
       <ul>
         <li *ngFor="let passenger of passengers; let i = index;">
           <span
@@ -20,6 +21,7 @@ interface Passenger {
           {{ i }}: {{ passenger.fullname }}
         </li>
       </ul>
+//-------------------------------Have multiple classes to display-------------------------------------
       <h3>Airline Passengers</h3>
       <ul>
         <li *ngFor="let passenger of passengers; let i = index;">
@@ -33,6 +35,8 @@ interface Passenger {
         </li>
       </ul>
     </div>
+//---------------------------------------------------------------------------------------------------
+
   `
 })
 export class AppComponent {
